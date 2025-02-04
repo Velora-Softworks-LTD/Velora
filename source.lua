@@ -7,5 +7,7 @@ if not game:IsLoaded() then
 end
 
 if Games[game.PlaceId] then
-    pcall(loadstring, game.HttpGet, game, Games[game.PlaceId])
+    local Loaded = loadstring(game:HttpGet(Games[Game.PlaceId]))
+
+    pcall(Loaded)
 end
